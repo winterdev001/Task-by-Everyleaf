@@ -1,24 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Model name
+> Name : Task
 
-Things you may want to cover:
+#Tables
+>User > Columns :
+                 > Id : Integer
+                 > Name : String
+>Task > Columns :
+                 > Id : Integer
+                 > User_id : Bigint
+                 > Label_name : String
+                 > Start_date : Datetime
+                 > End_date : Datetime
+                 > Status : String
+>Labels > Columns:
+                 > Id : Integer
+                 >Label_name : String
 
-* Ruby version
+#Schema        
 
-* System dependencies
+@User
+-----
+Id   | Name     |
+-----|----------|
+  1  | John Doe |
+-----------------
 
-* Configuration
+@Task
+------
+id  | user_id |   label_name          | start_date  | end_date   |status    |
+----|---------|-----------------------|-------------|------------|----------|
+ 1  |  1      | Doctors' appointment  | 1/1/2020    |10/1/2020   | pending  |
+-----------------------------------------------------------------------------
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+@Labels
+-------
+id  | label_name   |
+----|--------------|
+  1 | Chores       |
+--------------------
