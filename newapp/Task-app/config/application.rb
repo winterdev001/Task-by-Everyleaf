@@ -10,7 +10,9 @@ module TaskApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-
+    config.i18n.available_locales = [:en, :ja] 
+    config.i18n.default_locale = :ja 
+    
     config.generators do |g|
       g.test_framework :rspec,
                       fixtures: true,
@@ -20,6 +22,6 @@ module TaskApp
                       controller_specs: false,
                       request_specs: false
       g.fixture_replacement :factory_bot, dir: "spec/factories"
-    end    
+    end      
   end
 end
