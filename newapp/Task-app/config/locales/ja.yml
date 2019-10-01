@@ -1,5 +1,7 @@
 ---
 ja:
+  view: 
+    sample: "こんにちは世界"
   activerecord:
     errors:
       messages:
