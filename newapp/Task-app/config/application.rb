@@ -9,12 +9,9 @@ Bundler.require(*Rails.groups)
 module TaskApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.time_zone = "West Central Africa"
-    config.active_record.default_timezone = :local
     config.load_defaults 5.2
     config.i18n.available_locales = [:en, :ja] 
-    config.i18n.default_locale = :ja 
-    
+    config.i18n.default_locale = :ja     
 
     config.generators do |g|
       g.test_framework :rspec,
@@ -25,7 +22,9 @@ module TaskApp
                       controller_specs: false,
                       request_specs: false
       g.fixture_replacement :factory_bot, dir: "spec/factories"
-    end      
+    end  
+    config.time_zone = 'Tokyo' 
+    config.active_record.default_timezone = :local    
   end
 end
 
